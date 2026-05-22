@@ -1,0 +1,312 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+  background:#f5f5f5;
+}
+
+.analytics-container{
+  width:100%;
+  min-height:100vh;
+  background:#f7f7f7;
+  padding:20px;
+}
+
+/* TOP NAVBAR */
+
+.top-navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:40px;
+}
+
+.search-box input{
+  width:320px;
+  padding:14px 18px;
+  border:1px solid #d9d9d9;
+  border-radius:14px;
+  background:white;
+  outline:none;
+  font-size:15px;
+}
+
+.emergency-btn{
+  background:#c1121f;
+  color:white;
+  border:none;
+  padding:14px 28px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+/* HEADER */
+
+.page-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:30px;
+}
+
+.page-header h1{
+  font-size:52px;
+  margin-bottom:10px;
+  color:#111;
+}
+
+.page-header p{
+  color:#666;
+  font-size:18px;
+}
+
+.header-actions{
+  display:flex;
+  gap:20px;
+}
+
+.outline-btn{
+  padding:16px 30px;
+  border:1px solid #cfcfcf;
+  background:white;
+  border-radius:10px;
+  cursor:pointer;
+  font-size:16px;
+}
+
+.green-btn{
+  padding:16px 30px;
+  background:#004d40;
+  color:white;
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
+  font-size:16px;
+}
+
+/* STATS */
+
+.stats-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+  margin-bottom:35px;
+}
+
+.stat-card{
+  background:white;
+  border:1px solid #e3e3e3;
+  border-radius:12px;
+  padding:25px;
+}
+
+.active-card{
+  border-left:5px solid #005c4b;
+}
+
+.card-top{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:30px;
+  color:#666;
+}
+
+.main-value{
+  font-size:65px;
+  font-weight:bold;
+  color:#003b30;
+}
+
+.badge{
+  font-size:14px;
+  background:#83f28f;
+  padding:4px 8px;
+  border-radius:5px;
+}
+
+.bottom-line{
+  width:100%;
+  height:5px;
+  background:#e6e6e6;
+  margin-top:30px;
+  border-radius:20px;
+}
+
+.line-fill{
+  width:72%;
+  height:100%;
+  background:#00695c;
+  border-radius:20px;
+}
+
+.target-box{
+  background:#8df0b0;
+  display:inline-block;
+  padding:8px 15px;
+  border-radius:6px;
+  margin-top:10px;
+  margin-bottom:20px;
+}
+
+.small-text{
+  color:#555;
+  display:flex;
+  justify-content:space-between;
+}
+
+.optimum{
+  font-size:22px;
+  margin-left:10px;
+}
+
+.progress-wrapper{
+  display:flex;
+  gap:10px;
+  margin-top:30px;
+}
+
+.progress-item{
+  flex:1;
+  height:10px;
+  background:#d8d8d8;
+  border-radius:20px;
+}
+
+.progress-item.active{
+  background:#004d40;
+}
+
+.green-dot{
+  width:16px;
+  height:16px;
+  background:#007f5f;
+  border-radius:50%;
+}
+
+/* CHART */
+
+.chart-card{
+  background:white;
+  border:1px solid #e2e2e2;
+  border-radius:12px;
+  padding:30px;
+  margin-bottom:35px;
+}
+
+.chart-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:30px;
+}
+
+.chart-header h2{
+  font-size:36px;
+  margin-bottom:8px;
+}
+
+.chart-header p{
+  color:#666;
+}
+
+.legend{
+  display:flex;
+  gap:30px;
+}
+
+.legend-item{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.legend-dot{
+  width:14px;
+  height:14px;
+  border-radius:50%;
+}
+
+.dark{
+  background:#00291f;
+}
+
+.green{
+  background:#0b7d62;
+}
+
+.chart-area{
+  position:relative;
+  height:350px;
+  border-bottom:1px solid #ddd;
+}
+
+.graph-line{
+  position:absolute;
+  width:100%;
+  height:100%;
+}
+
+.line-one{
+  border-bottom:4px solid #00291f;
+  border-radius:50%;
+  transform:translateY(-60px);
+}
+
+.line-two{
+  border-bottom:4px solid #0b7d62;
+  border-radius:50%;
+  transform:translateY(40px);
+}
+
+.days{
+  display:flex;
+  justify-content:space-between;
+  margin-top:20px;
+  color:#777;
+}
+
+/* TABLE */
+
+.table-card{
+  background:white;
+  border:1px solid #e2e2e2;
+  border-radius:12px;
+  overflow:hidden;
+}
+
+.table-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:25px;
+}
+
+.table-header h2{
+  font-size:36px;
+}
+
+.table-header a{
+  text-decoration:none;
+  color:#004d40;
+  font-weight:bold;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+thead{
+  background:#f1f1f1;
+}
+
+th,td{
+  padding:18px;
+  text-align:left;
+  border-top:1px solid #ececec;
+}
