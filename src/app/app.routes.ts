@@ -5,6 +5,7 @@ import { Support } from './pages/support/support';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { Dashboard } from './pages/dashboard/dashboard';
+import {TelemetryComponent} from './pages/telemetry'
 
 export const routes: Routes = [
   { path: 'auth', component: Auth },
@@ -13,6 +14,7 @@ export const routes: Routes = [
   { path: 'dashboard', component: Dashboard},
   { path: '', redirectTo: '/auth', pathMatch: 'full' },
   { path: '**', redirectTo: '/auth' },
+  { path: 'telemetry', component: TelemetryComponent },
 
 ];
 @NgModule({
