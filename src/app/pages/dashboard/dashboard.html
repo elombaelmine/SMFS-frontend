@@ -1,1 +1,51 @@
-<p>dashboard works!</p>
+<div class="dashboard-container">
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <div class="top-bar">
+      <div>
+        <h2>Smart Farm Management</h2>
+        <p>Live telemetry from North Sector Grid-7</p>
+      </div>
+      <div class="top-right">
+        <div class="network-status">
+          <span class="dot"></span> Network: Stable
+        </div>
+        <button class="emergency-btn">Emergency Stop</button>
+      </div>
+    </div>
+
+    <h3 class="section-title">Operational Overview</h3>
+
+    <div class="cards-grid">
+      <!-- Soil Moisture -->
+      <div class="card">
+        <p class="card-title">Soil Moisture</p>
+        <p class="big-value">32%</p>
+        <span class="status warning">Warning</span>
+      </div>
+
+      <!-- Temperature -->
+      <div class="card">
+        <p class="card-title">Ambient Temperature</p>
+        <p class="big-value">24°C</p>
+        <p class="small-text">Range: 20-28°C</p>
+      </div>
+
+      <!-- Soil pH -->
+      <div class="card">
+        <p class="card-title">Soil pH</p>
+        <p class="big-value">6.5</p>
+      </div>
+
+      <!-- Image -->
+      <div class="card image-card" colspan="2">
+        <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad6c9" alt="Field">
+        <div class="image-overlay">
+          <h4>Sector North-07 Telemetry</h4>
+          <p>Last scanned via Drone Unit D-12 • 09:42 AM</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
