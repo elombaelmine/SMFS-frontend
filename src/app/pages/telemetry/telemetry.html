@@ -1,0 +1,156 @@
+<div class="telemetry-workspace">
+  <aside class="telemetry-control-panel">
+    <section class="telemetry-card filter-card">
+      <h3>Active Filters</h3>
+      
+      <div class="filter-group">
+        <h4>Sensor Type</h4>
+        <label class="checkbox-label"><input type="checkbox" checked> Soil Moisture</label>
+        <label class="checkbox-label"><input type="checkbox" checked> NPK Spectrometers</label>
+        <label class="checkbox-label"><input type="checkbox"> Light & UV Index</label>
+        <label class="checkbox-label"><input type="checkbox"> Wind Anemometers</label>
+      </div>
+
+      <div class="filter-group">
+        <h4>Field Sector</h4>
+        <label class="radio-label"><input type="radio" name="sector" checked> All Sectors</label>
+        <label class="radio-label"><input type="radio" name="sector"> North Sector (Maize)</label>
+        <label class="radio-label"><input type="radio" name="sector"> South Sector (Soy)</label>
+        <label class="radio-label"><input type="radio" name="sector"> East Orchard</label>
+      </div>
+    </section>
+
+    <section class="telemetry-card health-card">
+      <h3>Asset Health</h3>
+      <div class="health-stat">
+        <span class="lbl">Active Sensors</span>
+        <span class="val">1,248</span>
+      </div>
+      <div class="progress-bar-wrapper">
+        <div class="progress-bar-fill" style="width: 92%;"></div>
+      </div>
+      <div class="progress-subtext">
+        <span>HEALTHY: 92%</span>
+        <span>WARNING: 5%</span>
+      </div>
+    </section>
+  </aside>
+
+  <main class="telemetry-main-grid">
+    
+    <section class="telemetry-card heatmap-card">
+      <div class="card-header">
+        <div>
+          <h2>Field Heatmap: North Sector</h2>
+          <p class="subtitle">Real-time spatial distribution of soil moisture levels</p>
+        </div>
+        <div class="map-controls">
+          <button class="map-btn">🔍+</button>
+          <button class="map-btn">🔍-</button>
+          <button class="map-btn">🥞</button>
+        </div>
+      </div>
+      <div class="map-container">
+        <div class="map-placeholder-bg">
+          <div class="map-dot dot-optimal" style="top: 20%; left: 60%;"></div>
+          <div class="map-dot dot-fault" style="top: 25%; left: 88%;"></div>
+          <div class="map-dot dot-low" style="top: 70%; left: 63%;"></div>
+        </div>
+        
+        <div class="map-legend">
+          <div><span class="leg-dot dot-optimal"></span> Optimal Hydration</div>
+          <div><span class="leg-dot dot-low"></span> Low Nutrients</div>
+          <div><span class="leg-dot dot-fault"></span> Critical Fault</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="split-row-grid">
+      <section class="telemetry-card graph-card">
+        <div class="card-header">
+          <div>
+            <h2>Nutrient Levels <span class="muted">(NPK)</span></h2>
+            <p class="subtitle">Aggregated minute-by-minute fluctuations</p>
+          </div>
+          <select class="time-select"><option>Last 6 Hours</option></select>
+        </div>
+        <div class="mock-chart-area">
+          <div class="y-axis"><span>100%</span><span>75%</span><span>50%</span><span>25%</span></div>
+          <div class="chart-line-placeholder"></div>
+        </div>
+        <div class="chart-legend">
+          <span><span class="leg-dot line-n"></span> Nitrogen (N)</span>
+          <span><span class="leg-dot line-p"></span> Phosphorus (P)</span>
+          <span><span class="leg-dot line-k"></span> Potassium (K)</span>
+        </div>
+      </section>
+
+      <section class="telemetry-card table-card">
+        <div class="card-header">
+          <h2>Sensor Clusters</h2>
+          <button class="export-btn">Export CSV 📥</button>
+        </div>
+        <table class="clusters-table">
+          <thead>
+            <tr>
+              <th>CLUSTER ID</th>
+              <th>STATUS</th>
+              <th>BATTERY</th>
+              <th>ACTIVITY</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>NORTH_A_04</td>
+              <td><span class="badge badge-active">● ACTIVE</span></td>
+              <td>84%</td>
+              <td>📈</td>
+            </tr>
+            <tr>
+              <td>NORTH_A_12</td>
+              <td><span class="badge badge-active">● ACTIVE</span></td>
+              <td>91%</td>
+              <td>📈</td>
+            </tr>
+            <tr>
+              <td>NORTH_B_01</td>
+              <td><span class="badge badge-offline">● OFFLINE</span></td>
+              <td>02%</td>
+              <td>📉</td>
+            </tr>
+            <tr>
+              <td>NORTH_C_22</td>
+              <td><span class="badge badge-warning">● WARNING</span></td>
+              <td>42%</td>
+              <td>📈</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+
+    <div class="bottom-metrics-row">
+      <div class="telemetry-card micro-card">
+        <span class="micro-lbl">AVG. SOIL MOISTURE</span>
+        <span class="micro-val">32.4<span class="unit">%</span></span>
+        <span class="micro-trend trend-up">▲ +2.1% from yesterday</span>
+      </div>
+      <div class="telemetry-card micro-card">
+        <span class="micro-lbl">AIR TEMP (FIELD)</span>
+        <span class="micro-val">24.8<span class="unit">°C</span></span>
+        <span class="micro-trend">→ Stable within range</span>
+      </div>
+      <div class="telemetry-card micro-card">
+        <span class="micro-lbl">WIND SPEED</span>
+        <span class="micro-val">12.2<span class="unit">km/h</span></span>
+        <span class="micro-trend">💨 NW Direction</span>
+      </div>
+      <div class="telemetry-card micro-card">
+        <span class="micro-lbl">SOLAR RADIATION</span>
+        <span class="micro-val">840<span class="unit">W/m²</span></span>
+        <span class="micro-trend trend-up">☀️ Peak exposure</span>
+      </div>
+    </div>
+
+  </main>
+</div>
