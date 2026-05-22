@@ -6,6 +6,8 @@ import { Support } from './pages/support/support';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { Reports } from './pages/reports/reports';
+import { Dashboard } from './pages/dashboard/dashboard';
+import {TelemetryComponent} from './pages/telemetry'
 
 export const routes: Routes = [
   { path: 'auth', component: Auth },
@@ -13,9 +15,11 @@ export const routes: Routes = [
   { path: 'reports', component: Reports },
   { path: 'settings', component: Settings },
   { path: 'support', component: Support },
+  { path: 'dashboard', component: Dashboard},
+  { path: '', redirectTo: '/auth', pathMatch: 'full' },
+  { path: '**', redirectTo: '/auth' },
+  { path: 'telemetry', component: TelemetryComponent },
 
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-  { path: '**', redirectTo: '/auth' }
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
