@@ -2,15 +2,23 @@ import { Routes } from '@angular/router';
 import { Auth } from './pages/auth/auth';
 import { Settings } from './pages/settings/settings';
 import { Support } from './pages/support/support';
-import { TelemetryComponent } from './pages/telemetry/telemetry';
+import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { Dashboard } from './pages/dashboard/dashboard';
+import {TelemetryComponent} from './pages/telemetry'
 
 export const routes: Routes = [
   { path: 'auth', component: Auth },
   { path: 'settings', component: Settings },
   { path: 'support', component: Support },
-  { path: 'telemetry', component: TelemetryComponent }, 
-  
-  
+  { path: 'dashboard', component: Dashboard},
   { path: '', redirectTo: '/auth', pathMatch: 'full' },
-  { path: '**', redirectTo: '/auth' }
+  { path: '**', redirectTo: '/auth' },
+  { path: 'telemetry', component: TelemetryComponent },
+
 ];
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
