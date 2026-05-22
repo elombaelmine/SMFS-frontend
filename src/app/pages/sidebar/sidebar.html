@@ -1,0 +1,31 @@
+<aside class="sfms-sidebar">
+  <header class="sidebar-brand">
+    <h1>SFMS Command</h1>
+    <p>Precision IoT Grid</p>
+  </header>
+
+  <nav class="sidebar-nav">
+    <a routerLink="/dashboard" routerLinkActive="active-link" class="nav-item">
+      <span class="nav-icon">📊</span> Command Center
+    </a>
+    <a routerLink="/reports" routerLinkActive="active-link" class="nav-item">
+      <span class="nav-icon">📈</span> Analytical Reports
+    </a>
+    <a routerLink="/telemetry" routerLinkActive="active-link" class="nav-item">
+      <span class="nav-icon">🗺️</span> Field Telemetry
+    </a>
+  </nav>
+
+  <div class="sidebar-action-zone">
+    <button class="btn-add-sensor" (click)="onAddNewSensor()">Add New Sensor</button>
+  </div>
+
+  <footer class="sidebar-footer">
+    <a routerLink="/settings" routerLinkActive="active-link" class="footer-item">
+      <span class="footer-icon">⚙️</span> System Settings
+    </a>
+    <a routerLink="/support" routerLinkActive="active-link" class="footer-item">
+      <span class="footer-icon">❓</span> Support
+    </a>
+  </footer>
+</aside>

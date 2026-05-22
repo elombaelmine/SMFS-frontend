@@ -1,0 +1,161 @@
+.support-view {
+  padding: 1rem 0;
+}
+
+.support-header h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin: 0 0 0.25rem 0;
+  letter-spacing: -0.02em;
+}
+
+.support-header p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0 0 2rem 0;
+}
+
+.support-grid {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.support-card {
+  flex: 1;
+  background-color: var(--bg-sidebar);
+  border: 1px solid var(--border-muted);
+  border-radius: 6px;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.support-card h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin: 0 0 0.25rem 0;
+}
+
+.card-subtitle {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin: 0 0 1.75rem 0;
+}
+
+/* FAQ Accordion List Layout Styling */
+.faq-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--border-muted);
+  padding-bottom: 1.25rem;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.faq-item h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin: 0 0 0.5rem 0;
+}
+
+.faq-item p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Real-Time Monochromatic Diagnostic Console Interface */
+.console-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.diagnostic-console {
+  background-color: #0F172A; /* Deep slate background matching professional dark blocks */
+  border-radius: 4px;
+  overflow: hidden;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.console-header {
+  background-color: #1E293B;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  border-bottom: 1px solid #334155;
+}
+
+.status-indicator-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+.status-indicator-dot.green {
+  background-color: #10B981;
+}
+
+.console-title {
+  color: #94A3B8;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.console-body {
+  padding: 1.25rem;
+  max-height: 220px;
+  overflow-y: auto;
+  margin: 0;
+}
+
+.log-line {
+  margin: 0 0 0.65rem 0;
+  line-height: 1.4;
+}
+
+.log-line:last-child {
+  margin-bottom: 0;
+}
+
+.log-line code {
+  color: #E2E8F0;
+  font-size: 0.8rem;
+  white-space: pre-wrap;
+}
+
+/* Secondary Actions Layer for Clear logs operation */
+.support-actions {
+  margin-top: 1.5rem;
+}
+
+.btn-clear-logs {
+  width: 100%;
+  background-color: #F1F5F9;
+  color: var(--text-main);
+  border: 1px solid var(--border-muted);
+  padding: 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-clear-logs:hover {
+  background-color: var(--text-main);
+  color: #FFFFFF;
+  border-color: var(--text-main);
+}

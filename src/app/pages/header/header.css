@@ -1,0 +1,109 @@
+.sfms-header {
+  height: var(--header-height);
+  background-color: var(--bg-header);
+  border-bottom: 1px solid var(--border-muted);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+/* FIX: Targets the simplified h1 heading inside header-left */
+.header-left h1 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-main);
+  letter-spacing: -0.01em;
+  margin: 0; /* Prevents default browser margin from pushing the header height out */
+}
+
+.search-wrapper {
+  position: relative;
+  width: 320px;
+  display: flex;
+  align-items: center;
+}
+
+/* FIX: Changed --50% to -50% and added display alignment */
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%); 
+  width: 16px;
+  height: 16px;
+  color: var(--text-muted);
+  display: block;
+  pointer-events: none; /* Allows clicks to pass through to the input underneath */
+}
+
+.header-search {
+  width: 100%;
+  padding: 0.55rem 1rem 0.55rem 2.2rem;
+  font-size: 0.85rem;
+  background-color: #F1F5F9;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  color: var(--text-main);
+  box-sizing: border-box;
+}
+
+.header-search:focus {
+  outline: none;
+  border-color: var(--text-muted);
+  background-color: #FFFFFF;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.sync-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #F8F9FA;
+  padding: 0.35rem 0.65rem;
+  border-radius: 4px;
+  border: 1px solid var(--border-muted);
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: inline-block; /* Ensures the circular dot renders properly */
+}
+
+.status-dot.green {
+  background-color: #10B981;
+}
+
+.status-text, .sync-timestamp {
+  font-size: 0.75rem;
+  font-family: monospace;
+  color: var(--text-main);
+}
+
+.sync-timestamp {
+  color: var(--text-muted);
+}
+
+.btn-emergency-stop {
+  background-color: var(--accent-emergency);
+  color: #FFFFFF;
+  border: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-emergency-stop:hover {
+  background-color: #B91C1C; /* Darker red on hover state */
+}

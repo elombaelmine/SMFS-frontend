@@ -1,0 +1,81 @@
+.sfms-sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 2rem 1.5rem;
+  box-sizing: border-box;
+}
+
+.sidebar-brand h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin: 0 0 0.2rem 0;
+  letter-spacing: -0.02em;
+}
+
+.sidebar-brand p {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin: 0 0 2.5rem 0;
+}
+
+/* Navigation Layout Grouping */
+.sidebar-nav {
+  display: flex;
+  flex-direction: column; /* FIX: Arranges navigation options vertically */
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.nav-item, .footer-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.nav-item:hover, .footer-item:hover {
+  background-color: #F1F5F9;
+  color: var(--text-main);
+}
+
+/* Active Page State styling */
+.nav-item.active-link {
+  background-color: #51FFAE; /* Bright mint highlight accent block */
+  color: #022C22;
+  font-weight: 600;
+}
+
+/* Action zone configurations */
+.sidebar-action-zone {
+  margin-bottom: 2rem;
+}
+
+.btn-add-sensor {
+  width: 100%;
+  background-color: #022C22; /* High-contrast hunter green primary button */
+  color: #FFFFFF;
+  border: none;
+  padding: 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.sidebar-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-top: 1px solid var(--border-muted);
+  padding-top: 1.5rem;
+}

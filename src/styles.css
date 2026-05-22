@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  /* Layout Dimensions */
+  --sidebar-width: 260px;
+  --header-height: 70px;
+  
+  /* Color Accuracy from Mockup */
+  --bg-main: #F8F9FA;
+  --bg-sidebar: #FFFFFF;
+  --bg-header: #FFFFFF;
+  --border-muted: #E2E8F0;
+  
+  /* Typography & States */
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --accent-mint: #51FFAE; /* Dynamic color used for primary active link text background */
+  --accent-emergency: #DC2626; /* Emergency Stop Button fill */
+}
+
+/* Base resets for a true layout grid shell */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-main);
+  overflow: hidden;
+}

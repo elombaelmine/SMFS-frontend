@@ -1,0 +1,71 @@
+<div class="settings-view">
+  <header class="settings-header">
+    <h1>System Configuration</h1>
+    <p>Adjust telemetry grid parameters and external backend endpoints.</p>
+  </header>
+
+  <div class="settings-grid">
+    
+    <section class="settings-card">
+      <h2>Telemetry Thresholds</h2>
+      <p class="card-subtitle">Define safety margins for automated physical actuators.</p>
+      
+      <div class="sfms-form-group">
+        <label class="sfms-field-label">Critical Moisture Minimum (%)</label>
+        <input type="number" class="sfms-input-field" value="32">
+        <span class="field-hint">Triggers automated water pump activation below this value.</span>
+      </div>
+
+      <div class="sfms-form-group">
+        <label class="sfms-field-label">Maximum Air Temperature (°C)</label>
+        <input type="number" class="sfms-input-field" value="35">
+        <span class="field-hint">Triggers structural greenhouse ventilation systems.</span>
+      </div>
+
+      <div class="sfms-form-group">
+        <label class="sfms-field-label">Soil pH Safety Range</label>
+        <div class="range-inputs">
+          <input type="number" class="sfms-input-field numeric-split" value="6.0" step="0.1">
+          <span class="range-separator">to</span>
+          <input type="number" class="sfms-input-field numeric-split" value="7.5" step="0.1">
+        </div>
+      </div>
+    </section>
+
+    <section class="settings-card">
+      <h2>External Node Integration</h2>
+      <p class="card-subtitle">Configure connection routes for the core C++ engine payload strings.</p>
+      
+      <div class="sfms-form-group">
+        <label class="sfms-field-label">AgroMonitoring Base API Endpoint</label>
+        <input type="text" class="sfms-input-field" value="https://api.agromonitoring.com/v1/">
+      </div>
+
+      <div class="sfms-form-group">
+        <label class="sfms-field-label">Telemetry Synchronization Rate</label>
+        <select class="sfms-input-field select-wrapper">
+          <option value="2">Every 2 minutes (Real-time tracking)</option>
+          <option value="10">Every 10 minutes (Optimal power usage)</option>
+          <option value="60">Every 60 minutes (Low-bandwidth save)</option>
+          <option value="0">Manual Polling Control</option>
+        </select>
+      </div>
+
+      <div class="sfms-form-group">
+        <label class="sfms-field-label">System Mode Configuration</label>
+        <div class="toggle-control-row">
+          <span class="toggle-description">Enable Autonomous Pump Overrides</span>
+          <label class="switch-toggle">
+            <input type="checkbox" checked>
+            <span class="slider-round"></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="settings-actions">
+        <button class="btn-save-settings" (click)="onSaveSettings()">Apply Framework Changes</button>
+      </div>
+    </section>
+
+  </div>
+</div>

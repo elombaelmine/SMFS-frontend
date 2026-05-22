@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+/* Master CSS Resets & Variable Core Design System */
+:root {
+  --sidebar-width: 260px;
+  --header-height: 70px;
+  --bg-app: #F8FAFC;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border-muted: #E2E8F0;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--bg-app);
+}
+
+/* Application Wrapper Grid Splitter */
+.sfms-application-shell {
+  display: flex; /* FIX: Holds the sidebar and the content stack side-by-side */
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Sidebar Layout Container constraints */
+app-sidebar {
+  width: var(--sidebar-width);
+  min-width: var(--sidebar-width);
+  max-width: var(--sidebar-width);
+  height: 100vh;
+  background-color: #FFFFFF;
+  border-right: 1px solid var(--border-muted);
+  display: block; /* Ensures block properties apply inside custom Angular selectors */
+}
+
+/* Right Side: Header and Viewport Stack */
+.sfms-content-stack {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+app-header {
+  width: 100%;
+  height: var(--header-height);
+  background-color: #FFFFFF;
+  border-bottom: 1px solid var(--border-muted);
+  display: block;
+}
+
+/* Scrollable Dynamic Sub-page Viewport area */
+.sfms-dynamic-viewport {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto; /* Allows settings/support content to scroll independently */
+  box-sizing: border-box;
+  background-color: var(--bg-app);
+}

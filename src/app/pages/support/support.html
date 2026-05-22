@@ -1,0 +1,56 @@
+<div class="support-view">
+  <header class="support-header">
+    <h1>System Support & Live Diagnostics</h1>
+    <p>Review infrastructure technical FAQs or monitor live telemetry pipeline logs.</p>
+  </header>
+
+  <div class="support-grid">
+    
+    <section class="support-card">
+      <h2>Troubleshooting Directory</h2>
+      <p class="card-subtitle">Common system states and core operational guidelines.</p>
+      
+      <div class="faq-stack">
+        <div class="faq-item">
+          <h3>How often is field data updated?</h3>
+          <p>By default, the backend C++ daemon runs its data fetch operation every 2 minutes. This sync rate can be modified within your system settings panel.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>What does the "Network: Stable" tag indicate?</h3>
+          <p>It verifies that your application shell is successfully making handshake connections to the remote agricultural API servers with zero data drops.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>How do I reset an emergency stop state?</h3>
+          <p>Once an Emergency Stop command is issued, mechanical overrides must be verified locally. Refresh the application or toggle the switch interface to resume operations.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="support-card console-card">
+      <h2>Technical Diagnostic Streams</h2>
+      <p class="card-subtitle">Real-time compilation logs monitoring active C++ backend execution processes.</p>
+      
+      <div class="diagnostic-console">
+        <header class="console-header">
+          <span class="status-indicator-dot green"></span>
+          <span class="console-title">Core C++ Engine Log Stream (sfms_daemon.log)</span>
+        </header>
+        <div class="console-body">
+          <p class="log-line"><code>[04:48:12] [INFO] libcurl session initialized successfully. Binding socket...</code></p>
+          <p class="log-line"><code>[04:48:13] [DATA] Fetch payload compiled from grid coordinates: Lat 4.051, Lon 9.708</code></p>
+          <p class="log-line"><code>[04:48:14] [JSON] nlohmann::json parser successfully extracted field data -> moisture_idx: 32%</code></p>
+          <p class="log-line"><code>[04:48:14] [WARN] Telemetry index dropped below structural clearance threshold. Critical notification generated.</code></p>
+          <p class="log-line"><code>[04:50:15] [INFO] Initializing scheduled 2-minute interval network poll stream...</code></p>
+          <p class="log-line"><code>[04:50:16] [DATA] External agricultural API connection response code: 200 OK</code></p>
+        </div>
+      </div>
+
+      <div class="support-actions">
+        <button class="btn-clear-logs" (click)="onClearLogs()">Flush Live Log Buffers</button>
+      </div>
+    </section>
+
+  </div>
+</div>

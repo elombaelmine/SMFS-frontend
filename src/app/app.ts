@@ -1,12 +1,15 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Sidebar} from './pages/sidebar/sidebar';
+import { Header } from './pages/header/header';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true, // Declares it explicitly as a modern standalone frame
+  imports: [RouterOutlet, Sidebar, Header], // FIX: Inject elements here
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrls: ['./app.css']
 })
 export class App {
-  protected readonly title = signal('sfms');
+  title = 'sfms-frontend';
 }

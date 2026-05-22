@@ -1,0 +1,68 @@
+<div class="auth-wrapper">
+  <div class="auth-branding-panel">
+    <div class="branding-content">
+      <div class="project-box">
+        <span class="project-initials">SFMS</span>
+      </div>
+      <h1 class="project-title">Smart Farm Management System</h1>
+      <p class="project-subtitle">Precision IoT Agricultural Grid Control</p>
+    </div>
+  </div>
+  
+  <div class="auth-form-panel">
+    <div class="form-container">
+      
+      <nav class="auth-toggle-nav">
+        <button type="button" 
+                class="toggle-btn" 
+                [class.active]="isLoginMode" 
+                (click)="toggleMode(true)">
+          Sign In
+        </button>
+        <button type="button" 
+                class="toggle-btn" 
+                [class.active]="!isLoginMode" 
+                (click)="toggleMode(false)">
+          Register
+        </button>
+      </nav>
+
+      <header class="form-header">
+        <h2>{{ isLoginMode ? 'Welcome Back Operator' : 'Create Operator Account' }}</h2>
+        <p>Please enter your system security credentials to clear terminal initialization.</p>
+      </header>
+
+      <form class="sfms-auth-form" (ngSubmit)="onAuthSubmit()">
+        
+        @if (!isLoginMode) {
+          <div class="sfms-input-group">
+            <label class="sfms-field-label">Operator Full Name</label>
+            <input type="text" class="sfms-input-field" placeholder="e.g. John Doe">
+          </div>
+        }
+
+        <div class="sfms-input-group">
+          <label class="sfms-field-label">Institutional Email</label>
+          <input type="email" class="sfms-input-field" placeholder="operator@saintjeaningenieur.org">
+        </div>
+        
+        <div class="sfms-input-group">
+          <label class="sfms-field-label">Security Clearance Key</label>
+          <input type="password" class="sfms-input-field" placeholder="••••••••">
+        </div>
+
+        @if (!isLoginMode) {
+          <div class="sfms-input-group">
+            <label class="sfms-field-label">Confirm Security Key</label>
+            <input type="password" class="sfms-input-field" placeholder="••••••••">
+          </div>
+        }
+        
+        <button type="submit" class="btn-auth-submit">
+          {{ isLoginMode ? 'Initialize Secure Session' : 'Register Operator Terminal' }}
+        </button>
+      </form>
+
+    </div>
+  </div>
+</div>
