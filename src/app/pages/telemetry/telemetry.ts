@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './telemetry.html',
   styleUrls: ['./telemetry.css']
 })
-export class TelemetryComponent implements OnInit {
+export class Telemetry implements OnInit {
 
   constructor() { }
 
