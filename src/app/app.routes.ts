@@ -7,7 +7,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { Reports } from './pages/reports/reports';
 import { Dashboard } from './pages/dashboard/dashboard';
-import {TelemetryComponent} from './pages/telemetry'
+import {Telemetry} from './pages/telemetry/telemetry'
 
 export const routes: Routes = [
   { path: 'auth', component: Auth },
